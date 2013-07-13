@@ -1,6 +1,8 @@
 Penguinpostman::Application.routes.draw do
-  
-  resources :mailings
+
+root :to => 'mailings#index'
+
+resources :mailings
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
