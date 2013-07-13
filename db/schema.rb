@@ -11,16 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130713202641) do
+ActiveRecord::Schema.define(:version => 20130713211640) do
 
   create_table "mailings", :force => true do |t|
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "pages"
     t.string   "file_path"
     t.string   "user_email"
     t.string   "user_firstname"
     t.string   "user_lastname"
+    t.string   "user_street_1"
+    t.string   "user_street_2"
+    t.string   "user_city"
+    t.string   "user_state"
+    t.integer  "user_zip"
+    t.string   "recipient_first"
+    t.string   "recipient_last"
+    t.string   "recipient_street_1"
+    t.string   "recipient_street_2"
+    t.string   "recipient_city"
+    t.string   "recipient_state"
+    t.integer  "recipient_zip"
   end
 
 end

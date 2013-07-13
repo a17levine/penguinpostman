@@ -9,12 +9,14 @@ gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 group :production do
   gem 'pg'
+  gem "carrierwave"
 end
 
 group :development do
   gem 'sqlite3'
   gem 'hirb'
   gem 'better_errors'
+  gem "carrierwave"
 end
 
 # Gems used only for assets and not required
