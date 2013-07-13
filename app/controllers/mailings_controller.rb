@@ -1,6 +1,6 @@
 class MailingsController < ApplicationController
 	def new
-  	
+  	@mailing = Mailing.new
   end
 
   def create
