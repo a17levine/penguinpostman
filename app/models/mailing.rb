@@ -3,5 +3,6 @@ class Mailing < ActiveRecord::Base
 
   validates :user_email, presence: true
 
+  mount_uploader :file_path, 
 
 end
