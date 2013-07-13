@@ -1,3 +1,3 @@
-class Mailings < ActiveRecord::Base
+class Mailing < ActiveRecord::Base
   # attr_accessible :title, :body
 end
