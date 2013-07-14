@@ -1,6 +1,7 @@
 .DS_Store
 vendor/bundle
 uploads/
+.env
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 #
