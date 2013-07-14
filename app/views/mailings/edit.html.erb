@@ -1,0 +1,81 @@
+
+
+<h1>This is the EDIT page!!!!!! WOOOOOO!</h1>
+
+<h3>Wanna see the ID of this??? Check it: <%= @mailing.id %></h3>
+
+<p> <%= params.inspect %></p>
+
+
+<%= form_for @mailing do |f| %>
+  
+  <%= f.label "First Name" %>:
+  <%= f.text_field :user_firstname %><br />
+  <%= f.label "Last Name" %>:
+  <%= f.text_field :user_lastname %><br />
+  
+  <%= f.label "Street Address 1" %>:
+  <%= f.text_field :user_street_1 %><br />
+
+  <%= f.label "Street Address 2" %>:
+  <%= f.text_field :user_street_2 %><br />
+
+  <%= f.label "City" %>:
+  <%= f.text_field :user_city %><br />
+
+  <%= f.label "State" %>:
+  <%= f.text_field :user_state %><br />
+
+  <%= f.label "Zip" %>:
+  <%= f.text_field :user_zip %><br />
+
+<br />
+<br />
+
+  <%= f.label "First Name" %>:
+  <%= f.text_field :recipient_firstname %><br />
+  <%= f.label "Last Name" %>:
+  <%= f.text_field :recipient_lastname %><br />
+  
+  <%= f.label "Street Address 1" %>:
+  <%= f.text_field :recipient_street_1 %><br />
+
+  <%= f.label "Street Address 2" %>:
+  <%= f.text_field :recipient_street_2 %><br />
+
+  <%= f.label "City" %>:
+  <%= f.text_field :recipient_city %><br />
+
+  <%= f.label "State" %>:
+  <%= f.text_field :recipient_state %><br />
+
+  <%= f.label "Zip" %>:
+  <%= f.text_field :recipient_zip %><br />  
+
+
+  <%= f.label :pages %>:
+  <%= f.text_field :pages %><br />
+
+  <%= f.label :user_email %>:
+  <%= f.text_field :user_email %><br />
+  
+  <%= f.file_field :file_path %>
+  <%= f.submit %>
+
+  <script
+    src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
+    data-key="pk_live_G3naCbjf6XlAsRd2SNILUYfe"
+    data-amount="2000"
+    data-name="Demo Site"
+    data-description="2 widgets ($20.00)"
+    data-image="/128x128.png">
+  </script>
+
+<% end %>
+
+
+<!-- STRIPE -->
+
+
+
+<%= button_to "Submit Order", mailing_path(@mailing.id), :method => "get" %>

@@ -1,6 +1,8 @@
 .DS_Store
 vendor/bundle
 public/uploads
+config/initializers/dev_environment.rb
+config/initializers/stripe.rb
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 #
