@@ -1,62 +1,72 @@
-<h1>This is a test of the homepage</h1>
-
-<br>
-<br>
-<br>
-
-<%= form_for @mailing do |f| %>
-  
-  <%= f.label "First Name" %>:
-  <%= f.text_field :user_firstname %><br />
-  <%= f.label "Last Name" %>:
-  <%= f.text_field :user_lastname %><br />
-  
-  <%= f.label "Street Address 1" %>:
-  <%= f.text_field :user_street_1 %><br />
-
-  <%= f.label "Street Address 2" %>:
-  <%= f.text_field :user_street_2 %><br />
-
-  <%= f.label "City" %>:
-  <%= f.text_field :user_city %><br />
-
-  <%= f.label "State" %>:
-  <%= f.text_field :user_state %><br />
-
-  <%= f.label "Zip" %>:
-  <%= f.text_field :user_zip %><br />
-
-<br />
-<br />
-
-
-  <%= f.label "First Name" %>:
-  <%= f.text_field :recipient_firstname %><br />
-  <%= f.label "Last Name" %>:
-  <%= f.text_field :recipient_lastname %><br />
-  
-  <%= f.label "Street Address 1" %>:
-  <%= f.text_field :recipient_street_1 %><br />
-
-  <%= f.label "Street Address 2" %>:
-  <%= f.text_field :recipient_street_2 %><br />
-
-  <%= f.label "City" %>:
-  <%= f.text_field :recipient_city %><br />
-
-  <%= f.label "State" %>:
-  <%= f.text_field :recipient_state %><br />
-
-  <%= f.label "Zip" %>:
-  <%= f.text_field :recipient_zip %><br />  
-
-
-  <%= f.label :pages %>:
-  <%= f.text_field :pages %><br />
-
-  <%= f.label :user_email %>:
-  <%= f.text_field :user_email %><br />
-  
-  <%= f.file_field :file_path %>
-  <%= f.submit "Review order" %>
-<% end %>
+<body>
+  <%= form_for @mailing do |f| %>
+    <div class="container">
+        <div id="#header-text" class="row">
+            <div class="feature span12">
+                <h2 id="first" class="motto hidden-on-load">Send real mail again.</h2>
+                <h3 id="second" class="subheader hidden-on-load">In 30 seconds.</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">    
+        <div class="row upload">
+            <div id="third" class="span12 center hidden-on-load animated fadeInDown">
+                <img id="postcard-image" src="/images/penguinpostman.png">
+                <%= f.file_field :file_path, :id => 'upload_hidden' %>
+                <a id="upload"href="#" class="signup"> <span id="type-of-file">Send an Attachment</span></a>
+                <div id="helper-text" style="color: #aaa; font-size: 8px;">(Click to Upload)</div>
+            </div>
+        </div>
+        <div id="letter-form">
+            <div class="span12 contact_form">
+                <!-- Lets create a CSS3 stamp -->
+                <div class="hfeed" style="margin-top: 100px;">
+                            <article class="entry post">
+                                <header class="entry-header">
+                                    <div class="stamp">
+                                        <!-- the image -->
+                                        <img id="pengin_flyout" style="width: 150px; float: right; margin-top: 20px; margin-right: 20px;" src="../images/penguin_flyout.png">
+                                    </div>
+                                </header>
+                                <div class="entry-content">
+                                    <div class="row">
+                                        <div class="span4">
+                                            <form class="contact_form_from" action="#" method="post" name="contact_form">
+                                                <h3>From:</h3>
+                                                <%= f.text_field :user_firstname, :placeholder => "Maker" %><br />
+                                                <%= f.text_field :user_lastname, :placeholder => "Square"  %><br />
+                                                <%= f.text_field :user_street_1, :placeholder => "716 Congress"  %><br />
+                                                <%= f.text_field :user_street_2, :placeholder => "#100"  %><br />
+                                                <%= f.text_field :user_city, :placeholder => "Austin"  %><br />
+                                                <%= f.text_field :user_state, :placeholder => "TX"  %><br />
+                                                <%= f.text_field :user_zip, :placeholder => "78701"  %><br />
+                                                <%= f.text_field :user_email, :placeholder => "youremail@gmail.com"   %><br />
+                                            </form>
+                                        </div>
+                                        <div id="to_section" class="span8">
+                                            <form class="contact_form_to" action="#" method="post" name="contact_form">
+                                                <h3>To:</h3>
+                                                <%= f.text_field :recipient_firstname, :placeholder => "Mr."  %><br />
+                                                <%= f.text_field :recipient_lastname, :placeholder => "President"  %><br />
+                                                <%= f.text_field :recipient_street_1, :placeholder => "1600 Pennsylvania Ave"  %><br />
+                                                <%= f.text_field :recipient_street_2, :placeholder => "#200"  %><br />
+                                                <%= f.text_field :recipient_city, :placeholder => "Washington"  %><br />
+                                                <%= f.text_field :recipient_state, :placeholder => "DC"  %><br />
+                                                <%= f.text_field :recipient_zip, :placeholder => "20500"  %><br />
+                                            </form>
+                                        </div>
+                                    </div>
+                            </article>
+                        </div>
+                <div class="row center">
+                    <a id="submit"href="#" class="signup" style="width: 200px; margin-top: 30px;"> <span id="type-of-file">Review Order</span>
+                    </a>
+                    <br><%= f.submit "Review order", :id => 'submit_hidden' %>
+                    <div id="helper-text" style="color: #aaa; font-size: 8px;">(Click to Continue)</div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
