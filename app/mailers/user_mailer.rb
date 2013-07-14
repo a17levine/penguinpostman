@@ -15,7 +15,4 @@ class UserMailer < ActionMailer::Base
          :subject => "INCOMING ORDER #{@user.id}")
     attachments.deliver
   end
-
-  
-
 end
