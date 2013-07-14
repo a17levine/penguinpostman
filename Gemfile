@@ -7,10 +7,10 @@ gem 'rails', '3.2.3'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
-group :production do
-  gem 'pg'
-  gem 'carrierwave'
-end
+# group :production do
+#   gem 'pg'
+#   gem 'carrierwave'
+# end
 
 group :development do
   gem 'sqlite3'
