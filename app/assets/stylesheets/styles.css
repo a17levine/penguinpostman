@@ -55,7 +55,7 @@ input {
 	/* form element visual styles */
 	.contact_form input, .contact_form textarea { 
 		border:0px solid #aaa;
-		padding-right:30px;
+		padding-right:0px;
 		border-bottom: 1px dotted #aaa;
 		-moz-transition: padding .25s; 
 		-webkit-transition: padding .25s; 

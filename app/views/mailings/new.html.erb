@@ -20,7 +20,7 @@
         <div id="letter-form">
             <div class="span12 contact_form">
                 <!-- Lets create a CSS3 stamp -->
-                <div class="hfeed" style="margin-top: 100px;">
+                <div class="hfeed" style="margin-top: 60px;">
                             <article class="entry post">
                                 <header class="entry-header">
                                     <div class="stamp">
@@ -34,20 +34,20 @@
                                             <form class="contact_form_from" action="#" method="post" name="contact_form">
                                                 <%= f.text_field :user_firstname, :placeholder => "Maker", :style => 'width: 70px;' %>
                                                 <%= f.text_field :user_lastname, :placeholder => "Square", :style => 'width: 70px;' %><br>
-                                                <%= f.text_field :user_street_1, :placeholder => "716 Congress", :style => 'width: 100px;'%>
+                                                <%= f.text_field :user_street_1, :placeholder => "716 Congress", :style => 'width: 130px;'%>
                                                 <%= f.text_field :user_street_2, :placeholder => "#100", :style => 'width: 40px;'%><br>
                                                 <%= f.text_field :user_city, :placeholder => "Austin", :style => 'width: 80px;'%>
                                                 <%= f.text_field :user_state, :placeholder => "TX", :style => 'width: 20px;'%>
                                                 <%= f.text_field :user_zip, :placeholder => "78701", :style => 'width: 40px;'%><br>
-                                                <%= f.text_field :user_email, :placeholder => "youremail@gmail.com"%>
+                                                <%= f.text_field :user_email, :placeholder => "youremail@gmail.com", :style => 'width: 170px;'%>
                                             </form>
                                         </div>
                                         <div id="to_section" class="span4">
                                             <form class="contact_form_to" action="#" method="post" name="contact_form">
                                                 <%= f.text_field :recipient_firstname, :placeholder => "Mr.", :style => 'width: 70px;'%>
-                                                <%= f.text_field :recipient_lastname, :placeholder => "President", :style => 'width: 70px;'%>
-                                                <%= f.text_field :recipient_street_1, :placeholder => "1600 Pennsylvania Ave", :style => 'width: 100px;'  %>
-                                                <%= f.text_field :recipient_street_2, :placeholder => "#200", :style => 'width: 40px;'  %>
+                                                <%= f.text_field :recipient_lastname, :placeholder => "President", :style => 'width: 70px;'%><br>
+                                                <%= f.text_field :recipient_street_1, :placeholder => "1600 Penn Ave", :style => 'width: 130px;'  %>
+                                                <%= f.text_field :recipient_street_2, :placeholder => "#200", :style => 'width: 40px;'  %><br>
                                                 <%= f.text_field :recipient_city, :placeholder => "Washington", :style => 'width: 80px;'  %>
                                                 <%= f.text_field :recipient_state, :placeholder => "DC", :style => 'width: 20px;'  %>
                                                 <%= f.text_field :recipient_zip, :placeholder => "20500", :style => 'width: 40px;' %>
