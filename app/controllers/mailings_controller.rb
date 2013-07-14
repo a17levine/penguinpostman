@@ -4,7 +4,15 @@ class MailingsController < ApplicationController
   end
 
   def create
-  	
+  	@mailing = Mailing.new(params[:mailing])
+
+    if @mailing.save
+      render action: 'new'
+      flash[:notice] = "Mail successfully created"
+    else
+      render action: 'new'
+      flash[:notice] = "There were some errors"
+    end
   end
 
   def show
