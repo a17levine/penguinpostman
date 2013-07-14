@@ -12,6 +12,9 @@ class Mailing < ActiveRecord::Base
 
   # validates :user_email, presence: true
 
+  def user_fullname
+    "#{user_firstname} #{user_lastname}"
+  end
   
 
 end
