@@ -32,34 +32,32 @@
                                     <div class="row">
                                         <div class="span4">
                                             <form class="contact_form_from" action="#" method="post" name="contact_form">
-                                                <h3>From:</h3>
-                                                <%= f.text_field :user_firstname, :placeholder => "Maker" %><br />
-                                                <%= f.text_field :user_lastname, :placeholder => "Square"  %><br />
-                                                <%= f.text_field :user_street_1, :placeholder => "716 Congress"  %><br />
-                                                <%= f.text_field :user_street_2, :placeholder => "#100"  %><br />
-                                                <%= f.text_field :user_city, :placeholder => "Austin"  %><br />
-                                                <%= f.text_field :user_state, :placeholder => "TX"  %><br />
-                                                <%= f.text_field :user_zip, :placeholder => "78701"  %><br />
-                                                <%= f.text_field :user_email, :placeholder => "youremail@gmail.com"   %><br />
+                                                <%= f.text_field :user_firstname, :placeholder => "Maker", :style => 'width: 70px;' %>
+                                                <%= f.text_field :user_lastname, :placeholder => "Square", :style => 'width: 70px;' %><br>
+                                                <%= f.text_field :user_street_1, :placeholder => "716 Congress", :style => 'width: 100px;'%>
+                                                <%= f.text_field :user_street_2, :placeholder => "#100", :style => 'width: 40px;'%><br>
+                                                <%= f.text_field :user_city, :placeholder => "Austin", :style => 'width: 80px;'%>
+                                                <%= f.text_field :user_state, :placeholder => "TX", :style => 'width: 20px;'%>
+                                                <%= f.text_field :user_zip, :placeholder => "78701", :style => 'width: 40px;'%><br>
+                                                <%= f.text_field :user_email, :placeholder => "youremail@gmail.com"%>
                                             </form>
                                         </div>
-                                        <div id="to_section" class="span8">
+                                        <div id="to_section" class="span4">
                                             <form class="contact_form_to" action="#" method="post" name="contact_form">
-                                                <h3>To:</h3>
-                                                <%= f.text_field :recipient_firstname, :placeholder => "Mr."  %><br />
-                                                <%= f.text_field :recipient_lastname, :placeholder => "President"  %><br />
-                                                <%= f.text_field :recipient_street_1, :placeholder => "1600 Pennsylvania Ave"  %><br />
-                                                <%= f.text_field :recipient_street_2, :placeholder => "#200"  %><br />
-                                                <%= f.text_field :recipient_city, :placeholder => "Washington"  %><br />
-                                                <%= f.text_field :recipient_state, :placeholder => "DC"  %><br />
-                                                <%= f.text_field :recipient_zip, :placeholder => "20500"  %><br />
+                                                <%= f.text_field :recipient_firstname, :placeholder => "Mr.", :style => 'width: 70px;'%>
+                                                <%= f.text_field :recipient_lastname, :placeholder => "President", :style => 'width: 70px;'%>
+                                                <%= f.text_field :recipient_street_1, :placeholder => "1600 Pennsylvania Ave", :style => 'width: 100px;'  %>
+                                                <%= f.text_field :recipient_street_2, :placeholder => "#200", :style => 'width: 40px;'  %>
+                                                <%= f.text_field :recipient_city, :placeholder => "Washington", :style => 'width: 80px;'  %>
+                                                <%= f.text_field :recipient_state, :placeholder => "DC", :style => 'width: 20px;'  %>
+                                                <%= f.text_field :recipient_zip, :placeholder => "20500", :style => 'width: 40px;' %>
                                             </form>
                                         </div>
                                     </div>
                             </article>
                         </div>
                 <div class="row center">
-                    <a id="submit"href="#" class="signup" style="width: 200px; margin-top: 30px;"> <span id="type-of-file">Review Order</span>
+                    <a id="submit"href="#" class="signup" style="width: 200px; margin-top: 30px;"> <span id="type-of-file">Pay</span>
                     </a>
                     <br><%= f.submit "Review order", :id => 'submit_hidden' %>
                     <div id="helper-text" style="color: #aaa; font-size: 8px;">(Click to Continue)</div>

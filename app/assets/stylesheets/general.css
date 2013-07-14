@@ -19,6 +19,19 @@ a:hover {
     
 }
 
+.contact_form_from {
+    border-left: 1px #aaa solid;
+}
+
+.contact_form_to {
+    margin-top: 150px; 
+    padding-bottom: 50px;
+}
+
+.span4 {
+        padding-left: 10px;
+}
+
 #upload_hidden {
     opacity: 0;
     position: absolute;
@@ -552,7 +565,6 @@ form h4 {
 
 .contact_form {
     padding: 0px;
-    font-family: 'Just Another Hand', cursive;
 }
 
 .contact_form_from {
@@ -565,12 +577,10 @@ form h4 {
     list-style-position:outside;
     margin:0px;
     padding:0px;
-    font-family: 'Just Another Hand', cursive;
 }
 
 .contact_form_to ul {
     width:750px;
-    font-family: 'Just Another Hand', cursive;
     list-style-type:none;
     list-style-position:outside;
     margin:0px;
@@ -586,13 +596,12 @@ form h4 {
 }
 
 h3 {
-    font-family: 'Just Another Hand', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .contact_form_from .contact_form_to li{
     padding:0px; 
     position:relative;
-    font-family: 'Just Another Hand', cursive;
 } 
 
 form.contact_form_from input {
@@ -601,15 +610,14 @@ form.contact_form_from input {
 
 textarea:focus, input:focus{
     outline: 0;
-    font-family: 'Just Another Hand', cursive;
 
 }
 
 input {
-    margin-left: 30px;
+    margin-left: 0px;
     background-color: transparent;
-    font-family: 'Just Another Hand', cursive;
-    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
     border-bottom: 1px grey dotted;
 }
 

@@ -6,7 +6,7 @@ div.hfeed {
 article.post {
    position:relative;
    margin: 0 0 2em 0;
-   background: url('../img/paper_fibers_@2X.png');
+   background: url('../images/paper_fibers_@2X.png');
    padding: 10px;
    border: 1px solid rgba(0, 0, 0, 0.150);
  
@@ -23,7 +23,7 @@ article.post:before {
    content: '';
    width: 100%;
    height: 100%;
-   background: url('../img/paper_fibers_@2X.png');
+   background: url('../images/paper_fibers_@2X.png');
    border: 1px solid rgba(0, 0, 0, 0.150);
  
    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.19);
@@ -45,7 +45,7 @@ article.post:after {
    content: '';
    width: 100%;
    height: 100%;
-   background: url('../img/paper_fibers_@2X.png');
+   background: url('../images/paper_fibers_@2X.png');
    border: 1px solid rgba(0, 0, 0, 0.150);
  
    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
