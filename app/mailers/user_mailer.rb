@@ -2,7 +2,7 @@ class UserMailer < ActionMailer::Base
 
   def order_confirmation(user)
     @user = user
-    mail(:to => @user.user_email, 
+    mail(:to => user, 
          :from => "auctioneerbot@gmail.com",
          :subject => "CONFIRMATION - Thank You For Your Purchase")
   end
