@@ -5,6 +5,11 @@ class Mailing < ActiveRecord::Base
   :user_street_2, :user_city, :user_state, :user_zip, :recipient_first, :recipient_last,
   :recipient_street_1, :recipient_street_2, :recipient_city, :recipient_state, :recipient_zip
 
+  before_save :default_values
+  def default_values
+    self.order_processed = 'false' if self.order_processed.nil?
+  end
+
   # validates :user_email, presence: true
 
   
