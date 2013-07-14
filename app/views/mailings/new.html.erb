@@ -5,12 +5,34 @@
 <br>
 
 <%= form_for @mailing do |f| %>
+  
+  <%= f.label "First Name" %>:
+  <%= f.text_field :user_firstname %><br />
+  <%= f.label "Last Name" %>:
+  <%= f.text_field :user_lastname %><br />
+  
+  <%= f.label "Street Address 1" %>:
+  <%= f.text_field :user_street_1 %><br />
+
+  <%= f.label "Street Address 2" %>:
+  <%= f.text_field :user_street_2 %><br />
+
+  <%= f.label "City" %>:
+  <%= f.text_field :user_city %><br />
+
+  <%= f.label "State" %>:
+  <%= f.text_field :user_state %><br />
+
+  <%= f.label "Zip" %>:
+  <%= f.text_field :user_zip %><br />
+
   <%= f.label :pages %>:
   <%= f.text_field :pages %><br />
 
   <%= f.label :user_email %>:
   <%= f.text_field :user_email %><br />
-
+  
+  <%= f.file_field :file_path %>
   <%= f.submit %>
 <% end %>
 

@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(:version => 20130713211640) do
 
   create_table "mailings", :force => true do |t|
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
     t.integer  "pages"
     t.string   "file_path"
     t.string   "user_email"
@@ -26,8 +26,8 @@ ActiveRecord::Schema.define(:version => 20130713211640) do
     t.string   "user_city"
     t.string   "user_state"
     t.integer  "user_zip"
-    t.string   "recipient_first"
-    t.string   "recipient_last"
+    t.string   "recipient_firstname"
+    t.string   "recipient_lastname"
     t.string   "recipient_street_1"
     t.string   "recipient_street_2"
     t.string   "recipient_city"
