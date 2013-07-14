@@ -59,15 +59,15 @@
   <%= f.label :user_email %>:
   <%= f.text_field :user_email %><br />
 
-  <%= f.submit %>
+  <%= f.submit "Update & Checkout "%>
 
   <script
     src="https://checkout.stripe.com/v2/checkout.js" class="stripe-button"
     data-key="pk_test_hUrf8D6B8e8qtDHEBm9VVOuP"
     data-amount="499"
     data-name="Penguin Postman"
-    data-description="128x128 page"
-    data-image="/128x128.png">
+    data-description="1 page mailing"
+    data-image="/../../images/penguin128.png">
   </script>
 
 <% end %>
@@ -76,5 +76,6 @@
 <!-- STRIPE -->
 
 
-
+<% if false %>
 <%= button_to "Submit Order", mailing_path(@mailing.id), :method => "get" %>
+<% end %>

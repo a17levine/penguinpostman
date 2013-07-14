@@ -1,6 +1,7 @@
 .DS_Store
 vendor/bundle
 public/uploads
+/uploads
 config/initializers/dev_environment.rb
 config/initializers/stripe.rb
 
