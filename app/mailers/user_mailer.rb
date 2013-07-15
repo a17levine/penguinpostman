@@ -1,8 +1,7 @@
 class UserMailer < ActionMailer::Base
 
-  def order_confirmation(user)
-    @user = user
-    mail(:to => user, 
+  def order_confirmation_email(mailing)
+    mail(:to => mailing.user_email, 
          :from => "auctioneerbot@gmail.com",
          :subject => "CONFIRMATION - Thank You For Your Purchase")
   end
@@ -15,6 +14,9 @@ class UserMailer < ActionMailer::Base
          :subject => "INCOMING ORDER #{@user.id}")
     attachments.deliver
   end
+
+  # def index()
+  # end
 
   
 
