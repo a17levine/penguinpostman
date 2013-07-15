@@ -1,37 +1,76 @@
-<h1>This is the show page for <%= @mailing.user_firstname %>'s mailing!</h1>
+<script type="text/javascript">
+	$(document).ready(function() { 
+	    $('#first').hide().css("visibility", "visible").delay(1000).fadeIn("slow");
+	    $('#second').hide().css("visibility", "visible").delay(2000).fadeIn("slow");
+	    $('#third').hide().css("visibility", "visible").delay().fadeIn("slow");
+		$('#last').delay(1000).fadeIn("slow");
+	    })
+	});
 
-<div>
-	<p><%= @mailing.user_fullname %></p>
-	<p><%= @mailing.user_street_1 %></p>
-	<% if @mailing.user_street_2 %>
-		<p><%= @mailing.user_street_2 %></p>
-	<% end %>
-	<p><%= "#{@mailing.user_city}, #{@mailing.user_state} #{@mailing.user_zip}" %></p>
-	<p><%= @mailing.user_email %></p>
-</div>
+</script>
 
-<div>
-	<p><%= "#{@mailing.recipient_firstname} #{@mailing.recipient_lastname}" %></p>
-	<p><%= @mailing.recipient_street_1 %></p>
-	<% if @mailing.recipient_street_2 %>
-		<p><%= @mailing.recipient_street_2 %></p>
-	<% end %>
-	<p><%= "#{@mailing.recipient_city}, #{@mailing.recipient_state} #{@mailing.recipient_zip}" %></p>
-</div>
+<body>
+	<h2 id="first" class="motto">Please review your order.</h2>
+	<div class="container">    
+		<div id="">
+		    <div id="second" class="span12 contact_form">
+		        <!-- Lets create a CSS3 stamp -->
+		        <div class="hfeed" style="margin-top: 30px;">
+		                    <article class="entry post">
+		                        <header class="entry-header">
+		                            <div class="stamp">
+		                                <!-- the image -->
+		                                <img id="pengin_flyout" style="width: 150px; float: right; margin-top: 20px; margin-right: 20px;" src="../images/penguin_flyout.png">
+		                            </div>
+		                        </header>
+		                        <div class="entry-content">
+		                        	<%= button_to "Edit", edit_mailing_url(@mailing), :method => "get", :style => "color: red; border-bottom: none; text-align: left;"%>
+		                            <div class="row">
+		                                <div class="span4">
+		                                    <div style="margin-top: 15px;">
+		                                    	<p style="font-weight: bold;">From:</p>
+		                                    	<p><%= @mailing.user_fullname %></p>
+		                                    	<p><%= @mailing.user_street_1 %></p>
+		                                    	<% if @mailing.user_street_2 %>
+		                                    		<p><%= @mailing.user_street_2 %></p>
+		                                    	<% end %>
+		                                    	<p><%= "#{@mailing.user_city}, #{@mailing.user_state} #{@mailing.user_zip}" %></p>
+		                                    	<p><%= @mailing.user_email %></p>
+		                                    </div>
+		                                </div>
+		                                <div id="to_section" class="span4">
+		                                    <div style="margin-top: 150px;">
+		                                    	<p style="font-weight: bold; font-size: 20px;">To:</p>
+		                                    	<p style="font-size: 20px;"><%= "#{@mailing.recipient_firstname} #{@mailing.recipient_lastname}" %></p>
+		                                    	<p style="font-size: 20px;"><%= @mailing.recipient_street_1 %></p>
+		                                    	<% if @mailing.recipient_street_2 %>
+		                                    		<p style="font-size: 20px;"><%= @mailing.recipient_street_2 %></p>
+		                                    	<% end %>
+		                                    	<p style="font-size: 20px;"><%= "#{@mailing.recipient_city}, #{@mailing.recipient_state} #{@mailing.recipient_zip}" %></p>
+		                                    </div>
+		                                </div>
+		                            </div>
+		                    </article>
+		                </div>
+		    </div>
+		</div>
+		<div id="third" class="center">Attachment:
+			<p><%= @mailing.file_path.path.split('/').last %></p>
+		</div>
+		<div id="last" class="center" style="display: ;">
+			<form action="<%= place_order_mailing_path(@mailing) %>" method="post">
+			  <script 
+			  	src="https://checkout.stripe.com/v2/checkout.js" 
+			  	class="stripe-button"
+			    data-key="pk_test_hUrf8D6B8e8qtDHEBm9VVOuP"
+			    data-amount="499"
+			    data-name="Penguin Postman"
+			    data-description="1 page mailing"
+			    data-image="/../../images/penguin128.png"></script>
+			</form>
+		</div>
+	</div>
+</body>
 
-<div>
-	<p><%= @mailing.file_path.path.split('/').last %></p>
-</div>
 
-<%= button_to "Edit", edit_mailing_url(@mailing), :method => "get" %>
 
-<form action="<%= place_order_mailing_path(@mailing) %>" method="post">
-  <script 
-  	src="https://checkout.stripe.com/v2/checkout.js" 
-  	class="stripe-button"
-    data-key="pk_test_hUrf8D6B8e8qtDHEBm9VVOuP"
-    data-amount="499"
-    data-name="Penguin Postman"
-    data-description="1 page mailing"
-    data-image="/../../images/penguin128.png"></script>
-</form>

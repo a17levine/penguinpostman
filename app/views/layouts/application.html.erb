@@ -24,6 +24,8 @@
   <%= javascript_include_tag "bootstrap" %>
   <%= javascript_include_tag "bootstrap.min" %>
   <%= javascript_include_tag "script" %>
+  <%= javascript_include_tag "checkout" %>
+
   <%= csrf_meta_tags %>
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600" rel="stylesheet">
@@ -31,8 +33,14 @@
   
 </head>
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+
+<% if notice %>
+  <p class="notice info message "><%= notice %></p>
+<% end %>
+
+<% if alert %>
+  <p class="alert info message"><%= alert %></p>
+<% end %>
 
 <%= yield %>
 
