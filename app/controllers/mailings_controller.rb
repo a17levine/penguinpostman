@@ -12,7 +12,7 @@ class MailingsController < ApplicationController
   	@mailing = Mailing.new(params[:mailing])
 
     if @mailing.save
-      redirect_to show_mailing_url(@mailing), notice: "Database record successfully created"
+      redirect_to mailing_url(@mailing), notice: "Database record successfully created"
     else
       render action: 'new'
       flash[:notice] = "There were some errors"
