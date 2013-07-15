@@ -2,7 +2,11 @@ Penguinpostman::Application.routes.draw do
 
 root :to => 'mailings#new'
 
-resources :mailings
+resources :mailings do
+  member do
+    post :place_order
+  end  
+end
 
 
 

@@ -1,3 +1,37 @@
-<h1>The first name of this record is <%= @mailing.user_firstname %></h1>
+<h1>This is the show page for <%= @mailing.user_firstname %>'s mailing!</h1>
 
-<p>This is the show page!</p>
+<div>
+	<p><%= @mailing.user_fullname %></p>
+	<p><%= @mailing.user_street_1 %></p>
+	<% if @mailing.user_street_2 %>
+		<p><%= @mailing.user_street_2 %></p>
+	<% end %>
+	<p><%= "#{@mailing.user_city}, #{@mailing.user_state} #{@mailing.user_zip}" %></p>
+	<p><%= @mailing.user_email %></p>
+</div>
+
+<div>
+	<p><%= "#{@mailing.recipient_firstname} #{@mailing.recipient_lastname}" %></p>
+	<p><%= @mailing.recipient_street_1 %></p>
+	<% if @mailing.recipient_street_2 %>
+		<p><%= @mailing.recipient_street_2 %></p>
+	<% end %>
+	<p><%= "#{@mailing.recipient_city}, #{@mailing.recipient_state} #{@mailing.recipient_zip}" %></p>
+</div>
+
+<div>
+	<p><%= @mailing.file_path.path.split('/').last %></p>
+</div>
+
+<%= button_to "Edit", edit_mailing_url(@mailing), :method => "get" %>
+
+<form action="<%= place_order_mailing_path(@mailing) %>" method="post">
+  <script 
+  	src="https://checkout.stripe.com/v2/checkout.js" 
+  	class="stripe-button"
+    data-key="pk_test_hUrf8D6B8e8qtDHEBm9VVOuP"
+    data-amount="499"
+    data-name="Penguin Postman"
+    data-description="1 page mailing"
+    data-image="/../../images/penguin128.png"></script>
+</form>
