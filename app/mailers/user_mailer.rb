@@ -6,12 +6,12 @@ class UserMailer < ActionMailer::Base
          :subject => "CONFIRMATION - Thank You For Your Purchase")
   end
 
-  def order_submit(user)
-    @user = user
-    attachments["#{@user.file_path.path.split('/').last}"] = File.read("/uploads/mailing/file_path/#{@user.id}/#{@user.file_path.path.split('/').last}")
+  def order_submit(mailing)
+    @mailing = mailing
+    attachments["#{@mailing.file_path.path.split('/').last}"] = File.read("/uploads/mailing/file_path/#{@user.id}/#{@mailing.file_path.path.split('/').last}")
     mail(:to => @user.user_email, 
          :from => "auctioneerbot@gmail.com",
-         :subject => "INCOMING ORDER #{@user.id}")
+         :subject => "INCOMING ORDER #{@mailing.id}")
     attachments.deliver
   end
 
