@@ -14,8 +14,8 @@ class MailingsController < ApplicationController
     if @mailing.save
       redirect_to mailing_url(@mailing)
     else
-      render action: 'new'
       flash[:notice] = "There were some errors"
+      render action: 'new'
     end
   end
 

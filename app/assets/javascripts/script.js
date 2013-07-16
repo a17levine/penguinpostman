@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     })
 
-var uploadTypes = ['Send a Photo', 'Send a Letter', 'Send a DickPic', 'Send an Attachment', 'Send Anthrax']
+var uploadTypes = ['Send a Photo', 'Send a Letter', 'Send a Cat Meme', 'Send an Attachment', 'Send Anthrax',]
 var i=0;
 
 function LoopText () {
