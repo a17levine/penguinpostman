@@ -6,17 +6,16 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+gem 'carrierwave'
 
-# group :production do
-#   gem 'pg'
-#   gem 'carrierwave'
-# end
+group :production do
+  gem 'pg'
+end
 
 group :development do
   gem 'sqlite3'
   gem 'hirb'
   gem 'better_errors'
-  gem 'carrierwave'
   gem 'mail'
   gem 'dotenv-rails', :groups => [:development, :test]
 end
