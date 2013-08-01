@@ -2,6 +2,7 @@ $(document).ready(function() {
     $('#first').hide().css("visibility", "visible").delay(1000).fadeIn("slow");
     $('#second').hide().css("visibility", "visible").delay(2000).fadeIn("slow");
     $('#third').hide().css("visibility", "visible").delay(3000).fadeIn("slow");
+    $('#last').hide().delay(4000).fadeIn("slow");
          
     $('#upload').click(function() {
     	$('#upload').css({'background': '#3ca3d7','box-shadow': 'none', 'z-index': '10000'});

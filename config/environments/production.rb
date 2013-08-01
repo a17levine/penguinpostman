@@ -23,10 +23,10 @@ Penguinpostman::Application.configure do
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
-  config.action_mailer.default_url_options = {
-        :host => "appname.herokuapp.com"
-        :port => 80
-    }
+  # config.action_mailer.default_url_options = {
+  #       :host => "appname.herokuapp.com"
+  #       :port => 80
+  #   }
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
