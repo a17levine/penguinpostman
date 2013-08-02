@@ -50,7 +50,10 @@ class MailingsController < ApplicationController
         flash[:notice] = "Thank you for your order! You should expect it to arrive within 4-6 business days!"
         @mailing.order_processed = true
         @mailing.save
+        #Tell the UserMailer to send a confirmation email after save
+        UserMailer.order_confirmation_email(@mailing).deliver
         redirect_to root_path
+
       rescue Stripe::CardError => e
         # flash[:error] = e.message
         # redirect_to edit_mailing_path(@mailing.id)

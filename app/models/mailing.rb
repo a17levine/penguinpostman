@@ -11,6 +11,10 @@ class Mailing < ActiveRecord::Base
     self.order_processed = 'false' if self.order_processed.nil?
   end
 
+  # def index(user)
+  #   logger.debug(user.inspect)
+  # end
+
   # validates :user_email, presence: true
 
   def user_fullname
