@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130714021554) do
+ActiveRecord::Schema.define(:version => 20130802210825) do
 
   create_table "mailings", :force => true do |t|
     t.datetime "created_at",          :null => false
@@ -25,14 +25,14 @@ ActiveRecord::Schema.define(:version => 20130714021554) do
     t.string   "user_street_2"
     t.string   "user_city"
     t.string   "user_state"
-    t.integer  "user_zip"
+    t.string   "user_zip"
     t.string   "recipient_firstname"
     t.string   "recipient_lastname"
     t.string   "recipient_street_1"
     t.string   "recipient_street_2"
     t.string   "recipient_city"
     t.string   "recipient_state"
-    t.integer  "recipient_zip"
+    t.string   "recipient_zip"
     t.string   "stripe_id"
     t.boolean  "order_processed"
   end
