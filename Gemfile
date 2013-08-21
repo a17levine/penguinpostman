@@ -16,8 +16,10 @@ group :development do
   gem 'sqlite3'
   gem 'hirb'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'mail'
   gem 'dotenv-rails', :groups => [:development, :test]
+  gem 'guard-livereload'
 end
 
 # Gems used only for assets and not required

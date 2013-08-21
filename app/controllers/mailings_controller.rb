@@ -52,6 +52,8 @@ class MailingsController < ApplicationController
         @mailing.save
         #Tell the UserMailer to send a confirmation email after save
         UserMailer.order_confirmation_email(@mailing).deliver
+        #Tell admins that a new order has been placed
+        UserMailer.order_submit(@mailing).deliver
         redirect_to root_path
 
       rescue Stripe::CardError => e
